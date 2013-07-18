@@ -13,6 +13,11 @@
  *= require flat-ui
 */
 
+@import "bootstrap";
+body { padding: 60px 0; }
+@import "bootstrap-responsive";
+
+
 .container-narrow{
 	max-width: 700px;
 	margin: 0 auto;
