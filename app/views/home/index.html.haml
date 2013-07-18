@@ -1,2 +1,27 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+- if flash[:notice]
+	.alert.alert-info
+		= flash[:notice]
+
+%h1.logo-brand FindMe.Jobs
+
+.marketing-section.text-center
+	= simple_form_for @user, html: {class: "form-horizontal"} do |f|
+		= f.input_field :email, placeholder: "Your Email", class: "span3"
+		= f.button :submit, class: "btn-success btn-large", value: "Reserve Your Spot"
+	%span.muted Over 100 users already have!
+
+.marketing-section
+	%h2 Stop Wasting Time - Find Jobs Quickly!
+	%p.lead Don't waste anymore time searching for jobs.  Find available listings with a quick search.
+
+.marketing-section
+	%h2 No Degree Required
+	%p.lead Our primary goal is to find you jobs that don't require a college degree.
+
+.marketing-section
+	%h2 One Click Applications
+	%p.lead Apply for jobs with a single click!
+
+.marketing-section
+	%h2 Single Resume
+	%p.lead One simple resume makes it quick and easy to apply for tons of jobs.
