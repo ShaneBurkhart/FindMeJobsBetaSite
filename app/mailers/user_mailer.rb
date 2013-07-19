@@ -3,6 +3,12 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Welcome to FindMe.Jobs Beta')
+    if @user.employer?
+      template = "welcome_email_employer"
+    else
+      template = "welcome_email_job_seeker"
+    end
+    mail(to: @user.email, subject: 'Welcome to FindMe.Jobs Beta',
+        template_name: template)
   end
 end
