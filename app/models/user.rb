@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
   	uniqueness: true
   validate :check_account
 
+  def employer?
+    self.account == "Employer"
+  end
+
+  def job_seeker?
+    self.account == "Job Seeker"
+  end
+
   private
 
   	def check_account
