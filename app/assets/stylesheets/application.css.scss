@@ -17,6 +17,15 @@
 body { padding: 60px 0; }
 @import "bootstrap-responsive";
 
+select{
+	height: 41px;
+}
+
+.btn-submit{
+	height: 41px;
+	padding-top: 11px;
+}
+
 
 .container-narrow{
 	max-width: 700px;

@@ -1,5 +1,6 @@
 .marketing-section.text-center
 	= simple_form_for @user, html: {class: "form-horizontal"} do |f|
+		= f.input_field :account, as: :select, collection: ["Job Seeker", "Employer"], default: "Job Seeker", class: "span2"
 		= f.input_field :email, placeholder: "Your Email", class: "span3"
-		= f.button :submit, class: "btn-success btn-large", value: "Reserve Your Spot"
+		= f.button :submit, class: "btn-success btn-large btn-submit", value: "Reserve Your Spot"
 	%span.muted Over 100 users already have!
