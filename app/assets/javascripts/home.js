@@ -1,10 +1,10 @@
 var setCallbacks = function(){
 	$(".apply").unbind("click");
-	$(".apply").click(function(){
+	$(".apply").click(function(e){
+		e.preventDefault();
 		$(this).removeClass("btn-info");
 		$(this).addClass("btn-success");
 		$(this).text("Applied!");
-		console.log("clicked");
 	});
 }
 
