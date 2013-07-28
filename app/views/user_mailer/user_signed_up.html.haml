@@ -1,0 +1,19 @@
+%h1 Another User Signed Up!
+
+%p
+  = @user.email
+  as
+  = @user.employer? ? "an Employer" : "a Job Seeker"
+
+%p
+  There are currently
+  = @count
+  users signed up.
+
+%p
+  = @employers_count
+  Employers
+
+%p
+  = @job_seeker_count
+  Job Seekers
